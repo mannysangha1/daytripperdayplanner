@@ -178,6 +178,13 @@ function getHeaderDate() {
     $("#currentDay").text(currentHeaderDate);
 }
 
+// gets data for the header time
+function getHeaderTime() {
+    var currentHeaderTime = moment().format('h: mm: ssa Z');
+    $("#currentTime").text(currentHeaderTime);
+}
+
+
 // saves data to localStorage
 function saveReminders() {
     localStorage.setItem("myDay", JSON.stringify(myDay));
@@ -204,6 +211,9 @@ function init() {
 
 // loads header date
 getHeaderDate();
+
+// loads header time
+getHeaderTime();
 
 // creates the visuals for the scheduler body
 myDay.forEach(function(thisHour) {
