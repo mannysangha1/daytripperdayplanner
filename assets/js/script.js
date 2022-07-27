@@ -1,6 +1,7 @@
 // variable to store and loop through scheduler
 var myDay = [
     {
+        //12 hour and 24 hour clock
         id: "0",
         hour: "12",
         time: "12",
@@ -85,6 +86,7 @@ var myDay = [
         reminder: "",
     },
     {
+        // This ends the 12 hour window and begins the 24 hour window
         id: "12",
         hour: "12",
         time: "12",
@@ -172,13 +174,13 @@ var myDay = [
     
 ]
 
-// gets data for the header date
+// Header DATA
 function getHeaderDate() {
     var currentHeaderDate = moment().format('dddd, MMMM Do');
     $("#currentDay").text(currentHeaderDate);
 }
 
-// gets data for the header time
+// Timer DATA
 function getHeaderTime() {
     var currentHeaderTime = moment().format('h: mm: ssa Z');
     $("#currentTime").text(currentHeaderTime);
