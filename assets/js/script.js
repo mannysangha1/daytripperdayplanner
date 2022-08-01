@@ -187,7 +187,7 @@ function getHeaderTime() {
 }
 
 
-// saves data to localStorage
+// This function saves data to local storage for later use
 function saveReminders() {
     localStorage.setItem("myDay", JSON.stringify(myDay));
 }
